@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${titulo}"></title>
+</head>
+
+<body>
+	<h1 th:text="${titulo}"></h1>
+	<div th:if="${pacientes.isEmpty()}">
+		No hay usuarios registrados.
+	</div>
+	<table th:if="${not pacientes.isEmpty()}">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="paciente: ${pacientes}">
+				<td th:text="${paciente.nombre}"></td>
+				<td th:text="${paciente.apellido}"></td>
+				<td th:text="${paciente.email}"></td>
+			</tr>
+		</tbody>
+
+	</table>
+	<ul>
+		<li>
+			<button type="button">Agregar paciente</button>
+		</li>
+		<li>
+			<button type="button">Actualizar paciente</button>
+		</li>
+		<li>
+			<button type="button">Borrar paciente</button>
+		</li>
+	</ul>
+</body>
+
+</html>
