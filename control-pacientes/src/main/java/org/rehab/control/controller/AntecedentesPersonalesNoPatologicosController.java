@@ -1,7 +1,7 @@
 package org.rehab.control.controller;
 
-import org.rehab.control.entity.AntecedentesHeredoFamiliares;
-import org.rehab.control.service.AntecedentesHeredoFamiliaresService;
+
+import org.rehab.control.entity.AntecedentesPersonalesNoPatologicos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,17 +16,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value="/AHF")
-public class AntecedentesHeredoFamiliaresController {
+@RequestMapping(value="/APNP")
+public class AntecedentesPersonalesNoPatologicosController {
 
 	@Autowired
-	private AntecedentesHeredoFamiliaresService AntecedentesHeredoFamiliaresService;
+	private org.rehab.control.service.AntecedentesPersonalesNoPatologicosService AntecedentesPersonalesNoPatologicosService;
 	
 	@GetMapping("/")
 	@ResponseBody
-	public ResponseEntity<?> getAllAHF(){
+	public ResponseEntity<?> getAllAPNP(){
 		try {
-			return ResponseEntity.ok().body(AntecedentesHeredoFamiliaresService.getAllAHF());
+			return ResponseEntity.ok().body(AntecedentesPersonalesNoPatologicosService.getAllAPNP());
 		}catch(Exception e) {
 			return new ResponseEntity<>("datos no encontrados", HttpStatus.OK);
 		}
@@ -34,19 +34,19 @@ public class AntecedentesHeredoFamiliaresController {
 	
 	@PostMapping("/")
 	@ResponseBody
-	public AntecedentesHeredoFamiliares createAHF(@RequestBody AntecedentesHeredoFamiliares AHF) {
-		return AntecedentesHeredoFamiliaresService.updateAHF(AHF);
+	public AntecedentesPersonalesNoPatologicos createAPNP(@RequestBody AntecedentesPersonalesNoPatologicos APNP) {
+		return AntecedentesPersonalesNoPatologicosService.updateAHF(APNP);
 	}
 	
 	@PutMapping("/")
 	@ResponseBody
-	public AntecedentesHeredoFamiliares updateAHF(@RequestBody AntecedentesHeredoFamiliares AHF) {
-		return AntecedentesHeredoFamiliaresService.updateAHF(AHF);
+	public AntecedentesPersonalesNoPatologicos updateAPNP(@RequestBody AntecedentesPersonalesNoPatologicos APNP) {
+		return AntecedentesPersonalesNoPatologicosService.updateAHF(APNP);
 	}
 	
 	@DeleteMapping("/{id}")
 	@ResponseBody
-	public void deleteAHF(@PathVariable (value = "id") Long id) {
-		AntecedentesHeredoFamiliaresService.deleteAHF(id);
+	public void deleteAPNP(@PathVariable (value = "id") Long id) {
+		AntecedentesPersonalesNoPatologicosService.deleteAPNP(id);
 	}
 }
