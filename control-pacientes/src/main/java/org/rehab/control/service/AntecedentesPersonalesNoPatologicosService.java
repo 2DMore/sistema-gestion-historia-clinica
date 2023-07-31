@@ -15,7 +15,7 @@ public class AntecedentesPersonalesNoPatologicosService {
 	@Autowired
 	private AntecedentesPersonalesNoPatologicosRepository AntecedentesPersonalesNoPatologicosRepository;
 	
-	public AntecedentesPersonalesNoPatologicos createAHF(AntecedentesPersonalesNoPatologicos APNP) {
+	public AntecedentesPersonalesNoPatologicos createAPNP(AntecedentesPersonalesNoPatologicos APNP) {
 		log.info("Creando APNP: "+ APNP.toString());
 		return AntecedentesPersonalesNoPatologicosRepository.save(APNP);
 	}
@@ -24,7 +24,7 @@ public class AntecedentesPersonalesNoPatologicosService {
 		return AntecedentesPersonalesNoPatologicosRepository.findAll();
 	}
 	
-	public AntecedentesPersonalesNoPatologicos updateAHF(AntecedentesPersonalesNoPatologicos APNP) {
+	public AntecedentesPersonalesNoPatologicos updateAPNP(AntecedentesPersonalesNoPatologicos APNP) {
 		log.info("Actualizando APNP: "+ APNP.toString());
 		return AntecedentesPersonalesNoPatologicosRepository.save(APNP);
 	}
