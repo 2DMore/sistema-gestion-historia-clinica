@@ -42,7 +42,7 @@ public class PacienteController {
 		return "hola";
 	}
 	 */
-	@GetMapping()
+	@GetMapping("/")
 	@ResponseBody
 	public ResponseEntity<?> getAllPacientes(){
 		try {
