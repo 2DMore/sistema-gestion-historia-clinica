@@ -1,7 +1,7 @@
 package org.rehab.control.controller;
 
-import org.rehab.control.service.AntecedentesPersonalesNoPatologicosService;
-import org.rehab.control.entity.AntecedentesPersonalesNoPatologicos;
+import org.rehab.control.entity.AntecedentesPersonalesPatologicos;
+import org.rehab.control.service.AntecedentesPersonalesPatologicosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,17 +16,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value="/APNP")
-public class AntecedentesPersonalesNoPatologicosController {
+@RequestMapping(value="/APP")
+public class AntecedentesPersonalesPatologicoController {
 
 	@Autowired
-	private AntecedentesPersonalesNoPatologicosService AntecedentesPersonalesNoPatologicosService;
+	private AntecedentesPersonalesPatologicosService AntecedentesPersonalesPatologicosService;
 	
 	@GetMapping("/")
 	@ResponseBody
-	public ResponseEntity<?> getAllAPNP(){
+	public ResponseEntity<?> getAllAPP(){
 		try {
-			return ResponseEntity.ok().body(AntecedentesPersonalesNoPatologicosService.getAllAPNP());
+			return ResponseEntity.ok().body(AntecedentesPersonalesPatologicosService.getAllAPP());
 		}catch(Exception e) {
 			return new ResponseEntity<>("datos no encontrados", HttpStatus.OK);
 		}
@@ -34,19 +34,19 @@ public class AntecedentesPersonalesNoPatologicosController {
 	
 	@PostMapping("/")
 	@ResponseBody
-	public AntecedentesPersonalesNoPatologicos createAPNP(@RequestBody AntecedentesPersonalesNoPatologicos APNP) {
-		return AntecedentesPersonalesNoPatologicosService.createAPNP(APNP);
+	public AntecedentesPersonalesPatologicos createAPP(@RequestBody AntecedentesPersonalesPatologicos APP) {
+		return AntecedentesPersonalesPatologicosService.createAPP(APP);
 	}
 	
 	@PutMapping("/")
 	@ResponseBody
-	public AntecedentesPersonalesNoPatologicos updateAPNP(@RequestBody AntecedentesPersonalesNoPatologicos APNP) {
-		return AntecedentesPersonalesNoPatologicosService.updateAPNP(APNP);
+	public AntecedentesPersonalesPatologicos updateAPP(@RequestBody AntecedentesPersonalesPatologicos APP) {
+		return AntecedentesPersonalesPatologicosService.updateAPP(APP);
 	}
 	
 	@DeleteMapping("/{id}")
 	@ResponseBody
-	public void deleteAPNP(@PathVariable (value = "id") Long id) {
-		AntecedentesPersonalesNoPatologicosService.deleteAPNP(id);
+	public void deleteAPP(@PathVariable (value = "id") Long id) {
+		AntecedentesPersonalesPatologicosService.deleteAPP(id);
 	}
 }
