@@ -1,4 +1,4 @@
-package org.rehab.control.configuration;
+/*package org.rehab.control.configuration;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
@@ -13,3 +13,4 @@ public class ApplicationConfig {
       return modelMapper;
    }
 }
+*/

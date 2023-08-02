@@ -2,11 +2,12 @@ package org.rehab.control.controller;
 
 import java.util.List;
 
-import org.rehab.control.dto.SistemaCHDto;
-import org.rehab.control.service.SistemaCHService;
+import org.rehab.control.dto.SistemaCHWithSubsistemasDTO;
+//import org.rehab.control.service.SistemaCHService;
 import org.rehab.control.entity.Paciente;
 import org.rehab.control.entity.SistemaCH;
 import org.rehab.control.service.PacienteService;
+import org.rehab.control.service.SistemaCHService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,13 +26,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class SistemasCHController {
     @Autowired
     private SistemaCHService sistemaCHService;
-   
+    
     
     @PostMapping
-    public SistemaCH create(@RequestBody SistemaCHDto sistemaCHDto) {
-        
-        
-        return this.sistemaCHService.create(sistemaCHDto);
+    public SistemaCH create(@RequestBody SistemaCHWithSubsistemasDTO sistemaCH) {
+ 
+        return this.sistemaCHService.create(sistemaCH);
 
     }
 
