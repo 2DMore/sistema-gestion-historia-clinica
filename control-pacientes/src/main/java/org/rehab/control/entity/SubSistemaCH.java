@@ -1,5 +1,7 @@
 package org.rehab.control.entity;
 
+import org.rehab.control.sistemaCH.entity.SistemaCH;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
