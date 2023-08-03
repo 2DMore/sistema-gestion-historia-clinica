@@ -1,9 +1,9 @@
-package org.rehab.control.controller;
+package org.rehab.control.subsistemaCH.controller;
 
 import java.util.List;
 
-import org.rehab.control.entity.SubSistemaCH;
-import org.rehab.control.service.SubSistemaCHService;
+import org.rehab.control.subsistemaCH.entity.SubSistemaCH;
+import org.rehab.control.subsistemaCH.service.SubSistemaCHService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.modelmapper.ModelMapper;
-import org.rehab.control.entity.SubSistemaCH;
 import org.rehab.control.sistemaCH.dto.SistemaCHWithSubsistemasDTO;
 import org.rehab.control.sistemaCH.entity.SistemaCH;
 import org.rehab.control.sistemaCH.repository.SistemaCHRepository;
+import org.rehab.control.subsistemaCH.entity.SubSistemaCH;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

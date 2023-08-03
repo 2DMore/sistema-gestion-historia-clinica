@@ -1,4 +1,4 @@
-package org.rehab.control.entity;
+package org.rehab.control.subsistemaCH.entity;
 
 import org.rehab.control.sistemaCH.entity.SistemaCH;
 

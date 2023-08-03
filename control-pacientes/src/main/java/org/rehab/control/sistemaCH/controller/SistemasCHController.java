@@ -3,8 +3,7 @@ package org.rehab.control.sistemaCH.controller;
 import java.util.List;
 
 //import org.rehab.control.service.SistemaCHService;
-import org.rehab.control.entity.Paciente;
-import org.rehab.control.service.PacienteService;
+
 import org.rehab.control.sistemaCH.dto.SistemaCHWithSubsistemasDTO;
 import org.rehab.control.sistemaCH.entity.SistemaCH;
 import org.rehab.control.sistemaCH.service.SistemaCHService;

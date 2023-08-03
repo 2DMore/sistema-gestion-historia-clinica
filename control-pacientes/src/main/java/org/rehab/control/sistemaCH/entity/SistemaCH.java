@@ -2,7 +2,8 @@ package org.rehab.control.sistemaCH.entity;
 
 import java.util.List;
 
-import org.rehab.control.entity.SubSistemaCH;
+import org.rehab.control.diagnostico.entity.DiagnosticoEntitity;
+import org.rehab.control.subsistemaCH.entity.SubSistemaCH;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -15,6 +16,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,6 +37,10 @@ public class SistemaCH {
   
     @OneToMany(mappedBy = "sistemaCH", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<SubSistemaCH> subsistemas;
+
+    // Nueva relación bidireccional con OtraEntidad
+    @OneToOne(mappedBy = "sistema", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private DiagnosticoEntitity diagnosticoEntitity;
 
     // Constructor, getters y setters si es necesario
 }

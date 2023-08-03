@@ -1,11 +1,9 @@
-package org.rehab.control.service;
+package org.rehab.control.subsistemaCH.service;
 
 import java.util.List;
 
-
-import org.rehab.control.entity.SubSistemaCH;
-
-import org.rehab.control.repository.SubSistemaCHRepository;
+import org.rehab.control.subsistemaCH.entity.SubSistemaCH;
+import org.rehab.control.subsistemaCH.repository.SubSistemaCHRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 @Service
