@@ -3,7 +3,6 @@ package org.rehab.control.service;
 import java.util.List;
 
 import org.rehab.control.entity.AntecedentesHeredoFamiliares;
-import org.rehab.control.entity.Paciente;
 import org.rehab.control.repository.AntecedentesHeredoFamiliaresRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
