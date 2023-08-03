@@ -39,6 +39,7 @@ public class SistemaCH {
     private List<SubSistemaCH> subsistemas;
 
     // Nueva relación bidireccional con OtraEntidad
+    @JsonBackReference // Add this annotation
     @OneToOne(mappedBy = "sistema", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private DiagnosticoEntitity diagnosticoEntitity;
 

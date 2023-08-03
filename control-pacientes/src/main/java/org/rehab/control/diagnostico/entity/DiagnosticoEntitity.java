@@ -1,10 +1,13 @@
 package org.rehab.control.diagnostico.entity;
 
 import java.util.Date;
+import java.util.Optional;
 
 import org.rehab.control.sistemaCH.entity.SistemaCH;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -33,6 +36,7 @@ public class DiagnosticoEntitity {
     @Column(name = "fecha_diagnostico")
     private Date fechaDiagnostico;
 
+   @JsonManagedReference
     @ManyToOne
     private SistemaCH sistema;
     
