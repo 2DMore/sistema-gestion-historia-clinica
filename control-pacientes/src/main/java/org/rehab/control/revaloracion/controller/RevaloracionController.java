@@ -1,11 +1,13 @@
-package org.rehab.control.diagnostico.controller;
+package org.rehab.control.revaloracion.controller;
 
 import java.util.List;
 
 import org.rehab.control.diagnostico.dto.DiagnosticoDto;
 import org.rehab.control.diagnostico.entity.DiagnosticoEntitity;
-
 import org.rehab.control.diagnostico.service.DiagnosticoService;
+import org.rehab.control.revaloracion.dto.RevaloracionDto;
+import org.rehab.control.revaloracion.entity.RevaloracionEntitity;
+import org.rehab.control.revaloracion.service.RevaloracionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,17 +17,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value="/diagnostico")
-public class DiagnosticoController {
+public class RevaloracionController {
     @Autowired
-    DiagnosticoService diagnosticoService;
+    RevaloracionService revaloracionService;
 
     @PostMapping
-    public void create(@RequestBody DiagnosticoDto diagnosticoDto){
-        diagnosticoService.create(diagnosticoDto);
+    public void create(@RequestBody RevaloracionDto revaloracionDto){
+        revaloracionService.create(revaloracionDto);
     }
 
     @GetMapping
-    public List<DiagnosticoEntitity> getAll(){
-        return diagnosticoService.getAll();
+    public List<RevaloracionEntitity> getAll(){
+        return revaloracionService.getAll();
     }
 }
