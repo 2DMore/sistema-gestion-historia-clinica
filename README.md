@@ -285,3 +285,8 @@ localhost:8081/crp/agenda/
   "costoTerapia": 150.50
 }
 ``` 
+---
+## Diagrama de microservicios
+![Micros](https://github.com/2DMore/sistema-gestion-historia-clinica/assets/90080810/b6f04bc4-29c0-402c-be0a-a538b84fdc03)
+
+  
