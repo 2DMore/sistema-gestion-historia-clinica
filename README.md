@@ -295,32 +295,21 @@ localhost:8081/crp/api/upload/
     "idPersona": 6789
 }
 
-
-
 ``` 
-
 ## Diagnostico
 localhost:8081/crp/diagnostico
 ``` json
-
-
     {
     "diagnostico": "Ficticio",
     "id": 98765,
     "fechaDiagnostico": "2023-08-07T12:34:56Z",
     "idExpediente": 54321
     }
-
-
-
-
-
 ``` 
 
 ## Exploracion Fisica
 localhost:8081/crp/exploracionFisica
 ``` json
-
 
 {
     "exploracionFisica": "Ficticia",
@@ -328,45 +317,27 @@ localhost:8081/crp/exploracionFisica
     "id": 123456
 }
 
-
-
-
-
-
 ``` 
 
 ## Pronostico
 localhost:8081/crp/pronostico
 ``` json
-
-
 {
     "pronostico": "Optimista",
     "fechaPronostico": "2023-08-07T18:00:00Z",
     "id": 789012
 }
-
-
-
-
-
 ``` 
 
 ## Revaloracion
 localhost:8081/crp/revaloracion
 ``` json
-
-
 {
     "revaloracion": "Revaluación ficticia",
     "id": 34567,
     "fechaRevaloracion": "2023-08-07T20:30:00Z",
     "idExpediente": 890123
 }
-
-
-
-
 
 ``` 
 ## sistemasCH
