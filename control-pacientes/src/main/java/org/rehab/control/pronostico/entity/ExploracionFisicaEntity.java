@@ -1,3 +1,4 @@
+/*
 package org.rehab.control.exploracionFisica.entity;
 
 import java.util.Date;
@@ -28,3 +29,4 @@ public class ExploracionFisicaEntity {
     private Date fecha;
     
 }
+ */
