@@ -260,3 +260,28 @@ localhost:8081/crp/PA/
     "estadoActual":"ninguno"
 }
 ```
+## Agenda:  
+localhost:8081/crp/agenda/
+```json
+{
+    "paciente":{
+        "numExpediente":1,
+        "fechaCreacion":[2001,4,11],
+        "nombre":"Enrique",
+        "apellido":"Rodriguez",
+        "fechaNacimiento":[2001,1,1],
+        "direccion":"Calle 7, #2B, x 2 y 8, Colonia Montebello",
+        "telefono":9991111111,
+        "email":"nombre.apellido@gmail.com",
+        "estadoCivil":"soltero",
+        "escolaridad":"bachillerato",
+        "ocupacion": "pintor"
+  },
+  "fecha": "2023-08-15",
+  "hora": "14:30:00",
+  "tipoPaciente": "Inicial",
+  "estatusCita": "Agendada",
+  "numeroSesion": 1,
+  "costoTerapia": 150.50
+}
+``` 
