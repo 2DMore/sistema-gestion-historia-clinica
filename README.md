@@ -290,7 +290,7 @@ localhost:8081/crp/agenda/
 ![Micros](https://github.com/2DMore/sistema-gestion-historia-clinica/assets/90080810/b6f04bc4-29c0-402c-be0a-a538b84fdc03)
 ---
 ## Diagrama ER del sistema  
-![BD](https://github.com/2DMore/sistema-gestion-historia-clinica/assets/90080810/7e6fe621-9acd-448a-882f-90397419dc27)
+![Diagrama E-R](https://github.com/2DMore/sistema-gestion-historia-clinica/assets/73006726/478cf5f9-821e-48c6-99d1-1637823378f6)
 
 ---
   
