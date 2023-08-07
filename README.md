@@ -285,12 +285,110 @@ localhost:8081/crp/agenda/
   "costoTerapia": 150.50
 }
 ``` 
+## Archivo
+localhost:8081/crp/api/upload/
+``` json
+
+{
+    "id": 12345,
+    "nombreArchivo": "archivo_ficticio.txt",
+    "idPersona": 6789
+}
+
+
+
+``` 
+
+## Diagnostico
+localhost:8081/crp/diagnostico
+``` json
+
+
+    {
+    "diagnostico": "Ficticio",
+    "id": 98765,
+    "fechaDiagnostico": "2023-08-07T12:34:56Z",
+    "idExpediente": 54321
+    }
+
+
+
+
+
+``` 
+
+## Exploracion Fisica
+localhost:8081/crp/exploracionFisica
+``` json
+
+
+{
+    "exploracionFisica": "Ficticia",
+    "fechaExploracion": "2023-08-07T15:30:00Z",
+    "id": 123456
+}
+
+
+
+
+
+
+``` 
+
+## Pronostico
+localhost:8081/crp/pronostico
+``` json
+
+
+{
+    "pronostico": "Optimista",
+    "fechaPronostico": "2023-08-07T18:00:00Z",
+    "id": 789012
+}
+
+
+
+
+
+``` 
+
+## Revaloracion
+localhost:8081/crp/revaloracion
+``` json
+
+
+{
+    "revaloracion": "Revaluación ficticia",
+    "id": 34567,
+    "fechaRevaloracion": "2023-08-07T20:30:00Z",
+    "idExpediente": 890123
+}
+
+
+
+
+
+``` 
+## sistemasCH
+localhost:8081/crp/sistemasCH
+``` json
+{
+    "idExpediente": 123456,
+    "sistemaNombre": "Sistema Ficticio",
+    "subSistemas": ["Subsistema A", "Subsistema B", "Subsistema C"]
+}
+
+
+
+
+
+
+``` 
 ---
 ## Diagrama de microservicios
 ![Micros](https://github.com/2DMore/sistema-gestion-historia-clinica/assets/90080810/b6f04bc4-29c0-402c-be0a-a538b84fdc03)
 ---
-## Diagrama ER del sistema  
-![Diagrama E-R](https://github.com/2DMore/sistema-gestion-historia-clinica/assets/73006726/478cf5f9-821e-48c6-99d1-1637823378f6)
-
+## Diagrama ER Control Pacientes  
+![ERControlPacientes](https://github.com/2DMore/sistema-gestion-historia-clinica/assets/90080810/7912497e-f247-44fc-a824-dda893a6d834)
 ---
   
