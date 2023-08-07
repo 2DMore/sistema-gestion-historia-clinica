@@ -348,12 +348,6 @@ localhost:8081/crp/sistemasCH
     "sistemaNombre": "Sistema Ficticio",
     "subSistemas": ["Subsistema A", "Subsistema B", "Subsistema C"]
 }
-
-
-
-
-
-
 ``` 
 ---
 ## Diagrama de microservicios
