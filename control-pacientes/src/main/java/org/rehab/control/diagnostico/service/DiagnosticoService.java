@@ -6,7 +6,8 @@ import org.rehab.control.diagnostico.dto.DiagnosticoDto;
 import org.rehab.control.diagnostico.entity.DiagnosticoEntitity;
 
 import org.rehab.control.diagnostico.repository.DiagnosticoRepository;
-
+import org.rehab.control.fi.entity.Paciente;
+import org.rehab.control.fi.repository.PacienteRepository;
 import org.rehab.control.revaloracion.dto.RevaloracionDto;
 import org.rehab.control.sistemaCH.entity.SistemaCH;
 import org.rehab.control.sistemaCH.repository.SistemaCHRepository;
@@ -19,9 +20,11 @@ public class DiagnosticoService {
     private DiagnosticoRepository diagnosticoRepository;
     @Autowired
     private SistemaCHRepository sistemaCHRepository;
-    
+    @Autowired
+    private PacienteRepository pacienteRepository;
     public void create(DiagnosticoDto diagnosticoDto) {
         DiagnosticoEntitity diagnosticoEntity = new DiagnosticoEntitity();
+        Paciente paciente = new Paciente();
         
         if (diagnosticoDto.getId() == null) {
            
@@ -35,6 +38,9 @@ public class DiagnosticoService {
             diagnosticoEntity.setSistema(sistemaCH);
             diagnosticoEntity.setFechaDiagnostico(diagnosticoDto.getFechaDiagnostico());
             diagnosticoEntity.setDiagnostico(diagnosticoDto.getDiagnostico());
+            //paciente
+            paciente = pacienteRepository.findById(diagnosticoDto.getIdExpediente()).orElse(null);
+            diagnosticoEntity.setPaciente(paciente);
          
         } else {
        
