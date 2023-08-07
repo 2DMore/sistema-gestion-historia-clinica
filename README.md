@@ -289,7 +289,8 @@ localhost:8081/crp/agenda/
 ## Diagrama de microservicios
 ![Micros](https://github.com/2DMore/sistema-gestion-historia-clinica/assets/90080810/b6f04bc4-29c0-402c-be0a-a538b84fdc03)
 ---
-## Diagrama ER Control Pacientes  
-![ERControlPacientes](https://github.com/2DMore/sistema-gestion-historia-clinica/assets/90080810/7912497e-f247-44fc-a824-dda893a6d834)
+## Diagrama ER del sistema  
+![BD](https://github.com/2DMore/sistema-gestion-historia-clinica/assets/90080810/7e6fe621-9acd-448a-882f-90397419dc27)
+
 ---
   
