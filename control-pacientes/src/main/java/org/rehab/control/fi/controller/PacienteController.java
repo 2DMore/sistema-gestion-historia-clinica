@@ -1,4 +1,5 @@
 package org.rehab.control.fi.controller;
+import org.rehab.control.dto.EmailDto;
 import org.rehab.control.fi.entity.Paciente;
 import org.rehab.control.fi.service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
 
 
 @RestController
@@ -69,4 +69,11 @@ public class PacienteController {
 	public void deletePaciente(@PathVariable (value = "numExp") Long numExp){
 		pacienteService.deletePaciente(numExp);
 	}
+	
+//	@PostMapping("/emailKafka")
+//    public ResponseEntity<?> receiveEmailKafka(@RequestBody EmailDto emailDto) {
+//		pacienteService.sendMessage(emailDto);
+//        //kafkaTemplate.send("uady-mail-topic", emailDto); // Use the kafkaTemplate from the producer configuration
+//        return (ResponseEntity<?>) ResponseEntity.ok("mensaje enviado");
+//    }
 }
