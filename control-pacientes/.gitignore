@@ -1,3 +1,6 @@
+
+../mysql
+
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -13,12 +16,7 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
+### IntelliJ IDEA ###<button x-on:click="count++">Increment</button>
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
