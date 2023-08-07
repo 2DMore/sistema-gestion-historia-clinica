@@ -1,6 +1,9 @@
 package org.rehab.control.fi.entity;
 
 import java.time.LocalDate;
+import java.util.List;
+
+import org.rehab.control.agenda.entity.Agenda;
 
 import org.rehab.control.sistemaCH.entity.SistemaCH;
 
