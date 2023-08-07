@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.modelmapper.ModelMapper;
+import org.rehab.control.fi.repository.PacienteRepository;
 import org.rehab.control.sistemaCH.dto.SistemaCHWithSubsistemasDTO;
 import org.rehab.control.sistemaCH.entity.SistemaCH;
 import org.rehab.control.sistemaCH.repository.SistemaCHRepository;
@@ -19,6 +20,8 @@ import lombok.extern.log4j.Log4j2;
 public class SistemaCHService {
     @Autowired
     private SistemaCHRepository sistemaCHRepository;
+    @Autowired 
+    private PacienteRepository pacienteRepository;
     //@Autowired
    // private SubSistemaCH subSistemaCHRepository;
     /* 
@@ -28,8 +31,9 @@ public class SistemaCHService {
     public SistemaCH create(SistemaCHWithSubsistemasDTO dto) {
         try {
         SistemaCH sistemaCH = new SistemaCH();
+        sistemaCH.setPaciente(pacienteRepository.findById(dto.getIdExpediente()).orElse(null));
         sistemaCH.setSistemaNombre(dto.getSistemaNombre());
-
+    
         List<SubSistemaCH> subsistemas = new ArrayList<>();
         for (String subSistemaNombre : dto.getSubSistemas()) {
             SubSistemaCH subSistemaCH = new SubSistemaCH();

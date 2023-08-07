@@ -11,5 +11,6 @@ public class DiagnosticoDto {
     String diagnostico;
     Long id;
     Date fechaDiagnostico;
+    Long idExpediente;
 
 }

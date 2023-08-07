@@ -3,11 +3,11 @@ package org.rehab.control.sistemaCH.entity;
 import java.util.List;
 
 import org.rehab.control.diagnostico.entity.DiagnosticoEntitity;
-
+import org.rehab.control.fi.entity.Paciente;
 import org.rehab.control.subsistemaCH.entity.SubSistemaCH;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -16,6 +16,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -45,4 +46,8 @@ public class SistemaCH {
     private DiagnosticoEntitity diagnosticoEntitity;
 
     // Constructor, getters y setters si es necesario
+  //  @JsonBackReference // Add this annotation
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="num_expediente")
+    private Paciente paciente;
 }
