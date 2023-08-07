@@ -14,12 +14,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class RevaloracionService {
     @Autowired
-    private RevaloracionRepository diagnosticoRepository;
+    private RevaloracionRepository revaloracionRepository;
     @Autowired
     private SistemaCHRepository sistemaCHRepository;
     
     public void create(RevaloracionDto revaloracionDto) {
-        RevaloracionEntitity diagnosticoEntity = new RevaloracionEntitity();
+        RevaloracionEntitity revaloracionEntitity = new RevaloracionEntitity();
         
         if (revaloracionDto.getId() == null) {
            
@@ -30,9 +30,9 @@ public class RevaloracionService {
         Optional<SistemaCH> sistemaCHOptional = sistemaCHRepository.findById(revaloracionDto.getId());
         if (sistemaCHOptional.isPresent()) {
             SistemaCH sistemaCH = sistemaCHOptional.get();
-            diagnosticoEntity.setSistema(sistemaCH);
-            diagnosticoEntity.setFechaDiagnostico(revaloracionDto.getFechaRevaloracion());
-            diagnosticoEntity.setDiagnostico(revaloracionDto.getRevaloracion());
+            revaloracionEntitity.setSistema(sistemaCH);
+            revaloracionEntitity.setFechaRevaloracion(revaloracionDto.getFechaRevaloracion());
+            revaloracionEntitity.setRevaloracion(revaloracionDto.getRevaloracion());
          
         } else {
        
@@ -40,10 +40,10 @@ public class RevaloracionService {
         }
         
       
-        diagnosticoRepository.save(diagnosticoEntity);
+        revaloracionRepository.save(revaloracionEntitity);
     }
 
       public List<RevaloracionEntitity> getAll(){
-        return diagnosticoRepository.findAll();
+        return revaloracionRepository.findAll();
     }
 }

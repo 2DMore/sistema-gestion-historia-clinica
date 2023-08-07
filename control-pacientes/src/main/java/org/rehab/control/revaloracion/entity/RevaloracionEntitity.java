@@ -25,16 +25,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RevaloracionEntitity {
     @Id
-    @Column(name = "id_diagnostico")
+    @Column(name = "id_revaloracion")
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long idDiagnostico;
+    private Long idRevolacion;
 
-    @Column(name = "diagnostico")
-    private String diagnostico;
+    @Column(name = "revaloracion")
+    private String revaloracion;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "fecha_diagnostico")
-    private Date fechaDiagnostico;
+    private Date fechaRevaloracion;
 
    @JsonManagedReference
     @ManyToOne

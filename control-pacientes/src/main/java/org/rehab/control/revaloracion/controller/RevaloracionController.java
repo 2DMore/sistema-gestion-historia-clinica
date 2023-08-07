@@ -1,3 +1,4 @@
+
 package org.rehab.control.revaloracion.controller;
 
 import java.util.List;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value="/diagnostico")
+@RequestMapping(value="/revaloracion")
 public class RevaloracionController {
     @Autowired
     RevaloracionService revaloracionService;
