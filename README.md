@@ -1,4 +1,4 @@
-# sistema-gestion-historia-clinica
+# Sistema de Gestión de Historia Clinica 
 
 ## Integrantes
 - Willbert Manuel Gamboa Campos
